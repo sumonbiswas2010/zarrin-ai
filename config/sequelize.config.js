@@ -1,4 +1,5 @@
 const { Sequelize } = require("sequelize");
+const pg = require("pg");
 // require('pgvector')(Sequelize); // Enable pgvector support
 const logger = require("./logger");
 const config = require("./config");
@@ -10,6 +11,7 @@ const sequelize = new Sequelize(
     host: process.env.DB_HOST,
     port: process.env.DB_PORT,
     dialect: "postgres",
+    dialectModule: pg, // I've added this.
     logging: false,
     // dialectOptions: {
     //   ssl: {

@@ -62,6 +62,7 @@ const serverStatus = {
   version: "0.0.0",
   time: moment(new Date()).format("MMMM Do YYYY, h:mm:ss a"),
   isLive: process.env.isLive === "true",
+  sumon: "sumon",
   memoryUsage,
 };
 !serverStatus.isLive &&
